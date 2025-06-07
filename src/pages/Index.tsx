@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Music, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
+import Header from "@/components/Header";
 
 const Index = () => {
   const [email, setEmail] = useState("");
@@ -58,8 +58,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-rock-black text-white">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center hero-gradient">
+      <section className="relative min-h-screen flex items-center justify-center hero-gradient pt-20">
         <FloatingElements />
         
         <div className={`container mx-auto px-6 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -109,7 +111,7 @@ const Index = () => {
       </section>
 
       {/* Editorial Preview */}
-      <section className="py-20 bg-rock-gray">
+      <section id="editorials" className="py-20 bg-rock-gray">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Weekly Editorials & Music Culture
@@ -163,7 +165,7 @@ const Index = () => {
       </section>
 
       {/* Artist Management Preview */}
-      <section className="py-20 bg-rock-black">
+      <section id="artists" className="py-20 bg-rock-black">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             100+ Artists, One Stage
@@ -212,7 +214,7 @@ const Index = () => {
       </section>
 
       {/* Future Features Teaser */}
-      <section className="py-20 bg-rock-gray">
+      <section id="features" className="py-20 bg-rock-gray">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             More Than Just a Platform
@@ -252,7 +254,7 @@ const Index = () => {
       </section>
 
       {/* Final Signup Section */}
-      <section className="py-20 bg-rock-black">
+      <section id="signup" className="py-20 bg-rock-black">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-gradient">Join the Nation</span>
