@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Rock Nation Custom Colors
+				'rock-black': '#0a0a0a',
+				'rock-gray': '#1a1a1a',
+				'rock-warm-gray': '#2a2a2a',
+				'rock-neon-green': '#00ff88',
+				'rock-violet': '#8b5cf6',
+				'rock-silver': '#c0c0c0',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +92,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				'pulse-neon': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				'slide-up': {
+					'0%': { 
+						opacity: '0',
+						transform: 'translateY(50px)'
+					},
+					'100%': { 
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'waveform': {
+					'0%, 100%': { height: '20px' },
+					'50%': { height: '60px' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-neon': 'pulse-neon 2s ease-in-out infinite',
+				'slide-up': 'slide-up 0.6s ease-out',
+				'fade-in': 'fade-in 0.8s ease-out',
+				'waveform': 'waveform 1.5s ease-in-out infinite'
 			}
 		}
 	},
